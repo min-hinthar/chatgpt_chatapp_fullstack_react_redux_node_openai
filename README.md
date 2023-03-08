@@ -1,4 +1,4 @@
-# Project Title [ ChatGPT_ChatApp_Fullstack_React_Redux_Node_OpenAI ]
+# Project Title: [ ChatGPT_ChatApp_Fullstack_React_Redux_Node_OpenAI ]
 
 Deployed Live URL on Vercel: 
 
