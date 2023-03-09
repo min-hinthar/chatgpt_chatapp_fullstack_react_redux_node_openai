@@ -8,6 +8,7 @@ import {
 import Header from '@/components/customHeader';
 import StandardMessageForm from '@/components/customMessageForms/StandardMessageForm';
 import Ai from '@/components/customMessageForms/Ai';
+import AiCode from '@/components/customMessageForms/AiCode';
 
 const Chat = () => {
     const chatProps = useMultiChatLogic(
@@ -24,8 +25,11 @@ const Chat = () => {
                 style={{ height: '100vh' }}
                 renderChatHeader={(chat) => <Header chat={chat} />}
                 renderMessageForm={(props) => {
-                    if (chatProps.chat?.title.startsWith("OpenAI_")) {
+                    if (chatProps.chat?.title.startsWith("OpenAI_Chat")) {
                         return <Ai props={props} activeChat={chatProps.chat} />
+                    }
+                    if (chatProps.chat?.title.startsWith("OpenAI_Code")) {
+                        return <AiCode props={props} activeChat={chatProps.chat} />
                     }
 
                     return (
