@@ -9,8 +9,23 @@ const StandardMessageForm = ({ props, activeChat }) => {
 
     const handleChange = (e) => setMessage(e.target.value);
     const handleSubmit = async () => {
+        const date = new Date()
+            .toISOString()
+            .replace("T", " ")
+            .replace("Z", `${Math.floor(Math.random() * 1000)}+00:00`);
+        const at = attachment ? [{ blob: attachment, file: attachment.name }] : [];
+        const form = {
+            attachments: at,
+            created: date,
+            sender_username: props.username,
+            text: message,
+            activeChatId: activeChat.id,
+        }
         
-    }
+        await props.onSubmit(form);
+        setMessage("");
+        setAttachment("");
+    };
 
   return (
     <div className='message-form-container'>
@@ -67,13 +82,13 @@ const StandardMessageForm = ({ props, activeChat }) => {
                     className='message-form-icon-airplane'
                     onClick={() => {
                         setPreview("");
-                        // handleSubmit();
+                        handleSubmit();
                     }}
                 />
             </div>
         </div>
     </div>
   )
-}
+};
 
-export default StandardMessageForm
+export default StandardMessageForm;
