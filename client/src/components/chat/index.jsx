@@ -11,11 +11,11 @@ import Ai from '@/components/customMessageForms/Ai';
 import AiCode from '@/components/customMessageForms/AiCode';
 import AiAssist from '../customMessageForms/AiAssist';
 
-const Chat = () => {
+const Chat = ({ user, secret }) => {
     const chatProps = useMultiChatLogic(
         import.meta.env.VITE_PROJECT_ID,
-        "Admin",
-        "abcd"
+        user,
+        secret,
     );
 
     return (
