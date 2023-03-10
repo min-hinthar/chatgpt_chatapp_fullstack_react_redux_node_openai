@@ -9,6 +9,9 @@ const CustomHeader = ({ chat }) => {
             <h3 className='header-text'>
                 {chat.title}
             </h3>
+            <p>
+                MUST be Titled as: AiChat / AiCode / AiAssist + Add AI_Min as Member for AI Features
+            </p>
         </div>
         <div className='flexbetween'>
             <PhoneIcon className='icon-phone' />
@@ -20,7 +23,7 @@ const CustomHeader = ({ chat }) => {
                 ) :
                 (
                 <p className='header-text'>
-                    Select a Chat
+                    AI_Min is Online
                 </p>
                 )
             }
