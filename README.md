@@ -1,4 +1,4 @@
-# Project Title: [ ChatGPT ChatApp Fullstack React Redux Node OpenAI ]
+# Project Title: [ ChatGPT-3.5-Turbo ChatEngine Fullstack React Redux Node OpenAI ]
 
 Deployed Live URL on Vercel: 
 
