@@ -1,8 +1,10 @@
 # Project Title: [ ChatGPT-3.5-Turbo ChatEngine Fullstack React Redux Node OpenAI ]
 
-Deployed Live URL on Vercel: 
-
-![App Screenshots](./client/public/ChatGPT_1.jpg)
+![App Screenshots](./client/public/chatengine_1.png)
+![App Screenshots](./client/public/chatengine_2.png)
+![App Screenshots](./client/public/chatengine_3.png)
+![App Screenshots](./client/public/chatengine_4.png)
+![App Screenshots](./client/public/chatengine_5.png)
 
 
 ## Table of Contents
@@ -23,11 +25,11 @@ This project is to create a chat application that integrates ChatEngine, OpenAI,
 -----
 
 ### Installation
-Node.js, ChatEngine
+Node.js, ChatEngine, Axios, Body-Parser, CORS, Dotenv, Express, Helmet, Morgan, OpenAi, Nodemon, Toast
 
 
 #### Tech-Stacks
-Frontend : ChatEngine, Redux Toolkit, Redux Toolkit Query, Hero Icons, and React Router
+Frontend : ChatEngine, Vite, Redux Toolkit, Redux Toolkit Query, Hero Icons, Sass, Toast and React Router
 
 OpenAI, GPT3, Node.js
 
@@ -74,6 +76,3 @@ MIT
 #### Email: min@mandalaymorningstar.com
 
 -----
-
-
-
