@@ -20,7 +20,7 @@ const Chat = ({ user, secret }) => {
 
     return (
         <div style={{ flexBasis: '100%' }}>
-            <MultiChatSocket {...chatProps} />
+            <MultiChatSocket {...chatProps} onIsTyping={chatProps.onIsTyping}/>
             <MultiChatWindow 
                 {...chatProps}
                 style={{ height: '100vh' }}

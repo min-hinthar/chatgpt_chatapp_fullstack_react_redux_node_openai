@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Toaster } from "react-hot-toast";
 
 import Chat from '@/components/chat';
 import Login from '@/components/login';
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
+          <Toaster />
         <Routes>
           <Route 
             path='/'

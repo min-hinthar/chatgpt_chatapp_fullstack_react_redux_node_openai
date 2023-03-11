@@ -21,7 +21,7 @@ router.post("/login", async (req, res) => {
         res.status(200).json({ response: chatEngineResponse.data });
     } catch (error) {
     console.error("error", error.message);
-    res.status(500).json({ error: error.message });
+    res.status(403).json({ error: error.message });
     }
 });
 

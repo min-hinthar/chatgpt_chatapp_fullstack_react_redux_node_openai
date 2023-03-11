@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 import { usePostLoginMutation, usePostSignUpMutation } from '@/state/api';
 
@@ -10,17 +11,33 @@ const Login = ({ setUser, setSecret }) => {
     const [triggerSignUp] = usePostSignUpMutation();
 
     const handleLogin = () => {
-        triggerLogin({ username, password })
+        try {
+            triggerLogin({ username, password })    
+        } catch (error) {
+            if (error) {
+                console.log(error);
+                toast.error('Register as New User!');    
+            }
+        }
     }
 
     const handleRegister = () => {
-        triggerSignUp({ username, password })
+        try {
+            triggerSignUp({ username, password })
+            toast.success('Success: New User Registered! Please Login to use Chat App.')
+            setIsRegister(!isRegister)
+        } catch (e) {
+            console.error(e)
+        }
     }
 
     useEffect(() => {
         if (resultLogin.data?.response) {
             setUser(username);
             setSecret(password);
+            toast.success('User Login Successful');
+        } else if (resultLogin.data?.response.error) {
+            toast.error('Register New User!');
         }
     }, [resultLogin.data]) //eslint-disable-line
     
